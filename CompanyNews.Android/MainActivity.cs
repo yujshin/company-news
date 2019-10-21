@@ -6,7 +6,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter.Push;
+using Microsoft.AppCenter.Auth;
+using Microsoft.AppCenter.Data;
 namespace CompanyNews.Droid
 {
     [Activity(Label = "CompanyNews", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -18,6 +24,9 @@ namespace CompanyNews.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+            AppCenter.Start("92209e19-94f7-4b7d-a72d-be5695cb5788",
+                   typeof(Analytics), typeof(Crashes), typeof(Push), typeof(Distribute), typeof(Auth), typeof(Data));
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
