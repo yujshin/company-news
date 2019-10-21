@@ -22,12 +22,9 @@ fi
 # correct path to the file relative to the root of your repo
 GOOGLE_SERVICES_JSON_FILE=$APPCENTER_SOURCE_DIRECTORY/CompanyNews.Android/google-services.json
 
-if [ -e "$GOOGLE_SERVICES_JSON_FILE" ]
-then
-    echo "Updating google-services.json"
-    echo "$GOOGLE_SERVICES_JSON" > $GOOGLE_SERVICES_JSON_FILE
-    sed -i -e 's/\\"/'\"'/g' $GOOGLE_SERVICES_JSON_FILE
+echo "Adding google-services.json"
+echo "$GOOGLE_SERVICES_JSON" > $GOOGLE_SERVICES_JSON_FILE
+sed -i -e 's/\\"/'\"'/g' $GOOGLE_SERVICES_JSON_FILE
 
-    echo "File content:"
-    cat $GOOGLE_SERVICES_JSON_FILE
-fi
+echo "File content:"
+cat $GOOGLE_SERVICES_JSON_FILE
