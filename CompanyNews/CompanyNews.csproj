@@ -14,5 +14,7 @@
     <PackageReference Include="Microsoft.AppCenter.Data" Version="2.4.0-preview" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="2.4.0-preview" />
     <PackageReference Include="Microsoft.AppCenter.Auth" Version="2.4.0-preview" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
   </ItemGroup>
 </Project>

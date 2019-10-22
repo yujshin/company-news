@@ -28,6 +28,9 @@ namespace CompanyNews.Droid
             AppCenter.Start("92209e19-94f7-4b7d-a72d-be5695cb5788",
                    typeof(Analytics), typeof(Crashes), typeof(Push), typeof(Distribute), typeof(Auth), typeof(Data));
 
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.InitImageViewHandler();
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
