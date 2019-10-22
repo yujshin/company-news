@@ -10,7 +10,8 @@ namespace CompanyNews
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage()) { Title = "Company News" };
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnStart()
