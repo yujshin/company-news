@@ -69,7 +69,8 @@ namespace CompanyNews
                         { "ContentBrief", selectedItem.ContentBrief }
                       };
 
-            Analytics.TrackEvent("News Item Selected", properties);
+            // APPCENTER
+            // Analytics.TrackEvent("News Item Selected", properties);
         }
 
         void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
@@ -93,7 +94,9 @@ namespace CompanyNews
                         { "Title", tappedItem.Title },
                         { "ContentBrief", tappedItem.ContentBrief }
                       };
-                    Crashes.TrackError(ex, properties);
+
+                    // APPCENTER
+                    // Crashes.TrackError(ex, properties);
                     return;
                 }
             }
