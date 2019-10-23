@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -32,20 +32,6 @@
     <PackageReference Include="Xamarin.UITest">
       <Version>3.0.3</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CompanyNews.iOS\CompanyNews.iOS.csproj">
-      <Project>{B2B82841-93EE-4F27-B341-D3F3E66B929C}</Project>
-      <Name>CompanyNews.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\CompanyNews.Android\CompanyNews.Android.csproj">
-      <Project>{BD678B5E-3C29-44AA-B157-8C4E512956E4}</Project>
-      <Name>CompanyNews.Android</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests.cs" />
